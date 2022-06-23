@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "632cd66a-2a2a-4861-a44e-e35701e3b246",
+		"name": "Teste Itau",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obter Todos Produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44385/api/produto",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44385",
+					"path": [
+						"api",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter Produto Por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44385/api/produto/consultar-id/0001",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44385",
+					"path": [
+						"api",
+						"produto",
+						"consultar-id",
+						"0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter Todos Produto Cosif",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44385/api/produtocosif",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44385",
+					"path": [
+						"api",
+						"produtocosif"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Movimentação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"dataMes\": 1,\r\n        \"dataAno\": 2022,\r\n        \"descricao\": \"TESTE DESC\",\r\n        \"codUsuario\": \"TESTE\",\r\n        \"valor\": 150.00,\r\n        \"codProduto\": \"0001\",\r\n        \"produto\": \"CONTA CORRENTE\",\r\n        \"codCosif\": \"09648861030\",\r\n        \"produtoConsif\":  null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44385/api/movimentacao-manual/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44385",
+					"path": [
+						"api",
+						"movimentacao-manual",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter Movimentação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44385/api/movimentacao-manual/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44385",
+					"path": [
+						"api",
+						"movimentacao-manual",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

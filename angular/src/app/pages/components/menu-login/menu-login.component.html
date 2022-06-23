@@ -1,0 +1,28 @@
+<div class="header-misc " [ngSwitch]="usuarioLogado()">
+
+    <!-- Top Search
+    ============================================= -->
+    <div id="top-account" *ngSwitchCase="false">
+        <a [routerLink]="['/conta/cadastro']" data-lightbox="inline"><i class="icon-user-circle me-1  position-relative textColor"
+                style="top: 1px;"></i><span class="d-none d-sm-inline-block font-primary fw-medium"><span class="textColor">Crie sua conta</span></span></a>
+    </div>
+    <div id="top-account" *ngSwitchCase="false"  >
+        <a [routerLink]="['/conta/login']" data-lightbox="inline"><i class="icon-line2-login me-1 position-relative textColor"
+                style="top: 1px;"></i><span class="d-none d-sm-inline-block font-primary fw-medium"><span class="textColor">Login</span></span></a>
+    </div>
+   
+
+    <div id="top-account" *ngSwitchCase="true">
+        <a href="javascript:void(0)" data-lightbox="inline"><i class="icon-line2-user me-1 position-relative textColor"
+                style="top: 1px;"></i><span class="d-none d-sm-inline-block font-primary fw-medium">
+                    <span class="textColor"> {{ email }}</span>
+                   </span></a>
+    </div>
+    <div   *ngSwitchCase="true">
+        <a  href="javascript:void(0)" (click)="logout()"  ><i class="icon-line2-logout me-1 position-relative textColor"
+                style="top: 1px;"></i><span class="d-none d-sm-inline-block font-primary fw-medium ">
+                    <span class="textColor">Sair</span>
+                </span></a>
+    </div>
+</div>
+

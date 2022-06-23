@@ -1,0 +1,18 @@
+<div class="card-header controlColorCadastro ">
+    <div class="row mt-2">
+        <div class="col-9">
+             <h2 class="textColor text-start"> {{pageTitle}}</h2>
+        </div>
+        <div class="col-3">
+            <div *ngIf="showButton" class="col-md text-end">
+                 <button 
+                    pButton [label]="buttonText" 
+                    class="p-button-outlined text-end controlColorCadastro" 
+                    icon="pi pi-arrow-left" 
+                    [routerLink]="buttonLink">
+                </button>
+            </div>
+       </div>
+      
+    </div>
+</div>

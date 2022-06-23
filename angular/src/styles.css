@@ -1,0 +1,206 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+.disable {
+  pointer-events: none;
+  outline: none;
+  text-indent: -9999px;
+  background-color: #80808075 !important;
+}
+
+
+.btn-disable {
+  pointer-events: none;
+  outline: none;
+
+
+}
+
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+  -------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+  -------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+h2 {
+  color: #fff !important;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+#copyrights {
+  bottom: 0px;
+  background-image: linear-gradient(to right, #006a00, #00520a);
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+/* CONFIGURAÇÃO DE CORES DOS COMPONENTES DO PROJETOS*/
+.controlColor {
+  color: white !important;
+  /* background-image: linear-gradient(to right, #c31e01, #cf2900); 
+    background-image: linear-gradient(to right, #c31e01, #cf2900);*/
+  background-image: linear-gradient(to right, #065e9d, #10546e);
+  /*    background-color: #3a3ae7 !important;*/
+}
+
+.controlColorCadastro {
+  color: white !important;
+  /* background-image: linear-gradient(to right, #c35801, #cf2900); */
+  /* background-image: linear-gradient(to right, #cf2900, #c35801); */
+  background-image: linear-gradient(to right, #065e9d, #10546e);
+}
+
+.controlColorButton {
+  color: white !important;
+  /* background-color: #cf2900 !important;  */
+  background-color: #065e9d !important;
+}
+
+.backColor {
+  /* background-color: #c31e01 !important; */
+  background-color: #065e9d !important;
+}
+
+.textColor {
+  color: white !important;
+}
+
+.textColorBlack {
+  color: #000 !important;
+}
+
+.textColorWhite {
+  color: white !important;
+}
+
+.textColorNext {
+  color: gold !important;
+}
+
+.textDetalheForm {
+  color: rgb(89, 0, 255) !important;
+}
+
+/* PRIME NG */
+
+.p-datatable.p-datatable-sm .p-datatable-thead > tr > th {
+  padding: 0.2rem 0.2rem !important;
+}
+.p-datatable.p-datatable-sm .p-datatable-tbody > tr > td {
+  /* padding: 0.2rem 0.2rem !important; */
+  padding: 0.4rem 0.4rem !important;
+}
+.p-datatable.p-datatable-sm .p-datatable-tfoot > tr > td {
+  padding: 0.2rem 0.2rem !important;
+}
+
+.p-button.p-button-sm {
+  font-size: 0.675rem !important;
+  padding: 0.5rem 0.8rem !important;
+}
+
+.p-button.p-button-icon-only.p-button-rounded {
+  border-radius: 20% !important;
+  height: 1.6rem !important;
+}
+
+.p-inputtext {
+  padding: 0.375rem 0.75rem !important;
+  margin-top: -3px !important;
+  margin-bottom: -5px !important;
+  margin-left: -9px !important;
+  margin-right: -9px !important;
+  width: 100% !important;
+  height: auto !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #212529 !important;
+  background-color: #fff !important;
+  background-clip: padding-box !important;
+  border: 0px solid #ced4da !important ;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border-radius: 0rem !important;
+}
+p-inputnumber,
+.p-inputnumber {
+  width: 100% !important;
+}
+
+/* 
+   .p-inputnumber {
+    display: block !important;
+    width: 100% !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  } */

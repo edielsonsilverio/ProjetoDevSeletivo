@@ -1,0 +1,969 @@
+{
+  "paper": {
+    "name": "A4",
+    "leftMargin": 0.5,
+    "rightMargin": 0.5,
+    "topMargin": 0.5,
+    "bottomMargin": 0.5,
+    "isPortriat": true
+  },
+  "modelVersion": 2.01,
+  "defaultSchema": "Default",
+  "server": {
+    "objectType": "Server_CONCEPTUAL",
+    "name": "Default",
+    "schemas": [
+      {
+        "objectType": "Schema_CONCEPTUAL",
+        "name": "Default",
+        "tables": [
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Core",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Core_Message_1",
+                "referencedSchema": "Default",
+                "referencedTable": "Message",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Core_Core.Api_1",
+                "referencedSchema": "Default",
+                "referencedTable": "Core.Api",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Core_Bussiness_1",
+                "referencedSchema": "Default",
+                "referencedTable": "Bussiness",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Core.Api",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Core.Api_Identidade_1",
+                "referencedSchema": "Default",
+                "referencedTable": "Identidade",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              },
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Core.Api_Shop_1",
+                "referencedSchema": "Default",
+                "referencedTable": "Shop",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Message",
+            "oldName": "",
+            "foreignKeys": []
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Bussiness",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Bussiness_DataAccess_1",
+                "referencedSchema": "Default",
+                "referencedTable": "DataAccess",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Entity 1",
+            "oldName": "",
+            "foreignKeys": []
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "DataAccess",
+            "oldName": "",
+            "foreignKeys": []
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Identidade",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Identidade_BFF_1",
+                "referencedSchema": "Default",
+                "referencedTable": "BFF",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Shop",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Shop_BFF_1",
+                "referencedSchema": "Default",
+                "referencedTable": "BFF",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "",
+            "oldName": "",
+            "foreignKeys": []
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Entity 2",
+            "oldName": "",
+            "foreignKeys": []
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Angular",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Angular_BFF_1",
+                "referencedSchema": "Default",
+                "referencedTable": "BFF",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "Blazor",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_Blazor_BFF_1",
+                "referencedSchema": "Default",
+                "referencedTable": "BFF",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "AspNet Mvc",
+            "oldName": "",
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_CONCEPTUAL",
+                "name": "fk_AspNet Mvc_BFF_1",
+                "referencedSchema": "Default",
+                "referencedTable": "BFF",
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "NoneRelationship",
+                "oldName": ""
+              }
+            ]
+          },
+          {
+            "objectType": "Table_CONCEPTUAL",
+            "name": "BFF",
+            "oldName": "",
+            "foreignKeys": []
+          }
+        ]
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "name": "Diagram 1",
+      "paperWidth": 1,
+      "paperHeight": 1,
+      "tableFont": "Arial Unicode MS",
+      "tableFontSize": 14,
+      "isBalckWhite": false,
+      "showDBSchemaName": false,
+      "showViewRelations": true,
+      "notation": "crowsfoot",
+      "showFieldComment": false,
+      "showTableComment": false,
+      "shapes": [
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Core",
+          "x": 230,
+          "y": 60,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 0,
+            "g": 255,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Core.Api",
+          "x": 80,
+          "y": 190,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 0,
+            "g": 255,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Message",
+          "x": 360,
+          "y": 190,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 0,
+            "g": 255,
+            "b": 0,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Bussiness",
+          "x": 770,
+          "y": 50,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "DataAccess",
+          "x": 780,
+          "y": 250,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 255,
+            "g": 240,
+            "b": 69,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Identidade",
+          "x": 90,
+          "y": 480,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Shop",
+          "x": 350,
+          "y": 480,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Angular",
+          "x": 910,
+          "y": 480,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "Blazor",
+          "x": 910,
+          "y": 590,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "AspNet Mvc",
+          "x": 910,
+          "y": 700,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "Default",
+          "tableName": "BFF",
+          "x": 230,
+          "y": 760,
+          "width": 200,
+          "height": 100,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        }
+      ],
+      "layers": [
+        {
+          "name": "Bulding Block",
+          "x": 50,
+          "y": 40,
+          "width": 560,
+          "height": 300,
+          "layerColor": {
+            "r": 100,
+            "g": 234,
+            "b": 136,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        },
+        {
+          "name": "Bussiness",
+          "x": 670,
+          "y": 40,
+          "width": 350,
+          "height": 150,
+          "layerColor": {
+            "r": 190,
+            "g": 220,
+            "b": 255,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        },
+        {
+          "name": "Data",
+          "x": 670,
+          "y": 220,
+          "width": 350,
+          "height": 150,
+          "layerColor": {
+            "r": 255,
+            "g": 255,
+            "b": 132,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        },
+        {
+          "name": "Services",
+          "x": 60,
+          "y": 430,
+          "width": 550,
+          "height": 210,
+          "layerColor": {
+            "r": 100,
+            "g": 234,
+            "b": 136,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        },
+        {
+          "name": "WebApp",
+          "x": 880,
+          "y": 430,
+          "width": 270,
+          "height": 410,
+          "layerColor": {
+            "r": 100,
+            "g": 234,
+            "b": 136,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        },
+        {
+          "name": "Gatway",
+          "x": 80,
+          "y": 700,
+          "width": 520,
+          "height": 200,
+          "layerColor": {
+            "r": 100,
+            "g": 234,
+            "b": 136,
+            "a": 1
+          },
+          "fontName": "Arial Unicode MS",
+          "fontSize": 14,
+          "fontColor": {
+            "r": 51,
+            "g": 51,
+            "b": 51,
+            "a": 1
+          }
+        }
+      ],
+      "relations": [
+        {
+          "name": "fk_Core_Message_1",
+          "sourceTableName": "Core",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 445,
+              "y": 110
+            },
+            {
+              "x": 460,
+              "y": 110
+            },
+            {
+              "x": 460,
+              "y": 175
+            }
+          ],
+          "label": {
+            "x": 435,
+            "y": 72,
+            "width": 136,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Core_Core.Api_1",
+          "sourceTableName": "Core",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 215,
+              "y": 110
+            },
+            {
+              "x": 180,
+              "y": 110
+            },
+            {
+              "x": 180,
+              "y": 175
+            }
+          ],
+          "label": {
+            "x": 91,
+            "y": 72,
+            "width": 134,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Core_Bussiness_1",
+          "sourceTableName": "Core",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 445,
+              "y": 100
+            },
+            {
+              "x": 615,
+              "y": 100
+            },
+            {
+              "x": 615,
+              "y": 100
+            },
+            {
+              "x": 755,
+              "y": 100
+            }
+          ],
+          "label": {
+            "x": 435,
+            "y": 62,
+            "width": 140,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Bussiness_DataAccess_1",
+          "sourceTableName": "Bussiness",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 870,
+              "y": 165
+            },
+            {
+              "x": 870,
+              "y": 200
+            },
+            {
+              "x": 880,
+              "y": 200
+            },
+            {
+              "x": 880,
+              "y": 235
+            }
+          ],
+          "label": {
+            "x": 878,
+            "y": 155,
+            "width": 185,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Core.Api_Identidade_1",
+          "sourceTableName": "Core.Api",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 180,
+              "y": 305
+            },
+            {
+              "x": 180,
+              "y": 385
+            },
+            {
+              "x": 190,
+              "y": 385
+            },
+            {
+              "x": 190,
+              "y": 465
+            }
+          ],
+          "label": {
+            "x": 188,
+            "y": 295,
+            "width": 176,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Core.Api_Shop_1",
+          "sourceTableName": "Core.Api",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 260,
+              "y": 305
+            },
+            {
+              "x": 260,
+              "y": 460
+            },
+            {
+              "x": 450,
+              "y": 465
+            }
+          ],
+          "label": {
+            "x": 262,
+            "y": 255,
+            "width": 138,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Angular_BFF_1",
+          "sourceTableName": "Angular",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 895,
+              "y": 565
+            },
+            {
+              "x": 670,
+              "y": 640
+            },
+            {
+              "x": 415,
+              "y": 745
+            }
+          ],
+          "label": {
+            "x": 782,
+            "y": 527,
+            "width": 123,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Blazor_BFF_1",
+          "sourceTableName": "Blazor",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 895,
+              "y": 675
+            },
+            {
+              "x": 680,
+              "y": 710
+            },
+            {
+              "x": 445,
+              "y": 775
+            }
+          ],
+          "label": {
+            "x": 794,
+            "y": 637,
+            "width": 111,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_AspNet Mvc_BFF_1",
+          "sourceTableName": "AspNet Mvc",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 895,
+              "y": 750
+            },
+            {
+              "x": 450,
+              "y": 820
+            },
+            {
+              "x": 445,
+              "y": 820
+            }
+          ],
+          "label": {
+            "x": 755,
+            "y": 712,
+            "width": 150,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Identidade_BFF_1",
+          "sourceTableName": "Identidade",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 210,
+              "y": 595
+            },
+            {
+              "x": 210,
+              "y": 650
+            },
+            {
+              "x": 250,
+              "y": 745
+            }
+          ],
+          "label": {
+            "x": 212,
+            "y": 545,
+            "width": 142,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_Shop_BFF_1",
+          "sourceTableName": "Shop",
+          "sourceSchemaName": "Default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 390,
+              "y": 595
+            },
+            {
+              "x": 360,
+              "y": 670
+            },
+            {
+              "x": 360,
+              "y": 745
+            }
+          ],
+          "label": {
+            "x": 288,
+            "y": 545,
+            "width": 104,
+            "height": 30,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 51,
+              "g": 51,
+              "b": 51,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        }
+      ],
+      "viewRelations": []
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+<div class="container">
+
+  <h1>Movimentos Manuais</h1>
+
+  <form [formGroup]="resourceForm" (submit)="submitForm()">
+    <div class="row">
+      <div class="col-6 form-group">
+        <label for="dataMes">Mês:</label>
+        <!-- <input [ngClass]="{'disable': isNovo}" type="text" class="form-control mt-2 disable" id="dataMes"
+          formControlName="dataMes"> -->
+
+          <p-inputNumber class="form-control " [min]="1" [max]="12" id="dataMes" [ngClass]="{'disable': isNovo}" formControlName="dataMes" mode="decimal" inputId="dataMes" [useGrouping]="false">
+          </p-inputNumber>
+        <app-form-field-error [form-control]="resourceForm.get('dataMes')"></app-form-field-error>
+      </div>
+
+      <div class="col-6 form-group">
+        <label for="dataAno">Ano:</label>
+        <!-- <input [ngClass]="{'disable': isNovo}" type="text" class="form-control mt-2" id="dataAno"
+          formControlName="dataAno"> -->
+
+          <p-inputNumber class="form-control " [min]="1900" [max]="2100"  id="dataAno" [ngClass]="{'disable': isNovo}" formControlName="dataAno" mode="decimal"   [useGrouping]="false">
+        </p-inputNumber>
+
+        <app-form-field-error [form-control]="resourceForm.get('dataAno')"></app-form-field-error>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 form-group">
+        <label for="codProduto">Produto:</label>
+        <select (change)="onChange($event.target.value)" [ngClass]="{'disable': isNovo}" name="codProduto"
+          id="codProduto" class="form-select mt-2" formControlName="codProduto">
+          <option *ngFor="let produto of produtos" value="{{produto.codProduto}}">{{produto.descricao}}
+          </option>
+        </select>
+
+        <app-form-field-error [form-control]="resourceForm.get('codProduto')"></app-form-field-error>
+      </div>
+
+      <div class="col-6 form-group">
+        <label for="codCosif">Cosif:</label>
+        <select [ngClass]="{'disable': isNovo}" name="codCosif" id="codCosif" class="form-select mt-2"
+          formControlName="codCosif">
+          <option *ngFor="let cosif of produtoCosifs" value="{{cosif.codCosif}}">{{cosif.codCosifClassificacao}}
+          </option>
+        </select>
+
+        <app-form-field-error [form-control]="resourceForm.get('codCosif')"></app-form-field-error>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-6 form-group">
+        <label for="valor">Valor:</label>
+        <!-- <input [imask]="imaskConfig" [ngClass]="{'disable': isNovo}" type="text" class="form-control mt-2" id="valor" formControlName="valor"> -->
+        <p-inputNumber class="form-control " id="valor" [ngClass]="{'disable': isNovo}" formControlName="valor"
+          mode="currency" currency="BRL" locale="pt-BR" [minFractionDigits]="2">
+        </p-inputNumber>
+        <app-form-field-error [form-control]="resourceForm.get('valor')"></app-form-field-error>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 form-group">
+        <label for="descricao">Descrição:</label>
+        <textarea [ngClass]="{'disable': isNovo}" class="form-control mt-2" id="descricao"
+          formControlName="descricao"></textarea>
+
+        <app-form-field-error [form-control]="resourceForm.get('descricao')"></app-form-field-error>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-6 form-group">
+
+        <button [ngClass]="{'btn-disable': isNovo}" (click)="createResource();" class="btn btn-primary float-end ms-2 "> Incluir
+        </button>
+
+        <button (click)="novo()" type="submit" class="btn btn-primary float-end ms-2 "> Novo </button>
+
+        <button [ngClass]="{'btn-disable': isNovo}" (click)="limparCampo()" type="submit"
+          class="btn btn-primary float-end ms-2 "> Limpar </button>
+
+      </div>
+    </div>
+
+  </form>
+
+  <div class="row mt-3">
+    <div class="col-12">
+      <p-table #dt dataKey="id" [columns]="cols" [value]="resources" [scrollable]="true" scrollHeight="100%"
+        [(selection)]="registroSelecionado" [paginator]="true" [rows]="10" [selectionPageOnly]="true"
+        responsiveLayout="scroll" selectionMode="single" styleClass="p-datatable-sm p-datatable-striped"
+        currentPageReportTemplate="Visualizar {first} de {last} de {totalRecords} registros"
+        (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns" pSortableColumn="col.header">
+              {{ col.header }}
+              <p-sortIcon field="col.header"></p-sortIcon>
+            </th>
+
+            <th class="align-component"></th>
+
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr>
+            <td *ngFor="let col of columns" [pSelectableRow]="rowData">
+              {{ rowData[col.field] }}
+            </td>
+          </tr>
+        </ng-template>
+
+      </p-table>
+    </div>
+  </div>
+
+</div>
