@@ -14,4 +14,17 @@ export class MovimentacaoManualService extends BaseResourceService<MovimentacaoM
     super("movimentacao-manual", injector,MovimentacaoManual.fromJson)
   }
 
+  public salvar(resource: MovimentacaoManual): Observable<MovimentacaoManual> {
+    const url = `${this.UrlServiceV1}${this.apiPath}/`;
+    
+    console.log('testesssssss ' +resource);
+    
+    return this.http
+      .post(url, this.ObterHeaderJson())
+      .pipe(
+        map(this.jsonDataToResource.bind(this)),
+        catchError(this.handleError)
+      );
+  }
+
 }

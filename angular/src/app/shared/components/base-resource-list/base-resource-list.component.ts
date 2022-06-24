@@ -24,7 +24,7 @@ export abstract class BaseResourceListComponent<T extends BaseResourceModel> imp
     filterColumns: string[];
     displayModal: boolean = false;
 
-    protected formBuilder: FormBuilder;
+    //protected formBuilder: FormBuilder;
     protected spinner: NgxSpinnerService;
 
     constructor(protected injector: Injector,
@@ -32,17 +32,8 @@ export abstract class BaseResourceListComponent<T extends BaseResourceModel> imp
         protected jsonDataToResouceFn: (jsonData) => T //Criando um parametro passando uma função
     ) {
         this.spinner = this.injector.get(NgxSpinnerService);
-        this.formBuilder = this.injector.get(FormBuilder);
     }
 
-    /*
-
-         this.resourceService.post(resource)
-            .subscribe({
-                next: (success) => this.actionsForSuccess(success),
-                error: (error) => this.actionsForError(error),
-            });
-    */
     ngOnInit(): void {
         this.setShowSpinner();
 
@@ -91,7 +82,7 @@ export abstract class BaseResourceListComponent<T extends BaseResourceModel> imp
 
 
     showDialog(resource: T) {
-        this.obterSelecionado( resource);
+       // this.obterSelecionado( resource);
         this.displayModal = true;
     }
 
@@ -110,7 +101,7 @@ export abstract class BaseResourceListComponent<T extends BaseResourceModel> imp
     }
 
     onRowSelect(event: any) {
-         this.obterSelecionado( event.data)
+        this.obterSelecionado( event.data)
     }
 
     onRowUnselect(event: any) {

@@ -13,14 +13,15 @@ export class MovimentacaoManual extends BaseResourceModel {
         public valor?: number,
         public codProduto?: number,
         public produto?: number,
-        public codCosif?: string,
-        public produtoConsif?: ProdutoCosif
+        public codCosif?: number,
+        //public produtoConsif?: ProdutoCosif
     ) {
         super();
      }
 
 
     static fromJson(jsonData:any):MovimentacaoManual{
+       
         return Object.assign(new MovimentacaoManual(),jsonData);
     }
 }

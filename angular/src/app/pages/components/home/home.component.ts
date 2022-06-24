@@ -25,7 +25,7 @@ export class HomeComponent
   implements OnInit
 {
   currentAction: string;
-  resourceForm: FormGroup;
+  // resourceForm: FormGroup;
   pageTitle: string;
   serverErrorMessages: string[] = null;
   submittingForm: boolean = false;
@@ -70,12 +70,11 @@ export class HomeComponent
       { field: 'valor', header: 'Valor' },
     ];
     super.ngOnInit();
-
     this.carregaProduto();
 
     this.setCurrentAction();
     this.buildResourceForm();
-    //  this.loadResource();
+    this.currentAction == 'new';
   }
 
   showDialog(model: MovimentacaoManual) {
@@ -128,75 +127,21 @@ export class HomeComponent
 
   submitForm() {
     this.submittingForm = true;
-
-    if (this.currentAction == 'new') this.createResource();
-    else this.updateResource();
+    this.createResource();
   }
 
   protected setCurrentAction() {
-
-    if (this.getCurrentAction('new')) this.currentAction = 'new';
-    else if (this.getCurrentAction('view')) this.currentAction = 'view';
-    else this.currentAction = 'edit';
-  }
-
-  protected loadResource() {
-    //Carrega os dados de acordo com o parâmetro informado.
-    if (this.currentAction == 'edit' || this.currentAction == 'view') {
-      this.route.paramMap
-        .pipe(
-          switchMap((params) => this.resourceService.getById(+params.get('id')))
-        )
-        .subscribe(
-          (resource) => {
-            this.resource = resource;
-            this.resourceForm.patchValue(resource); // binds loaded resource data to ResourceForm
-          },
-          (error) => (error) => this.actionsForError(error)
-        );
-    }
-  }
-
-  protected setPageTitle() {
-    //Definie o titulo de acordo com o parâmetro da url
-    if (this.getCurrentAction('new')) this.pageTitle = this.creationPageTitle();
-    else if (this.getCurrentAction('view'))
-      this.pageTitle = this.viewPageTitle();
-    else {
-      this.pageTitle = this.editionPageTitle();
-    }
-  }
-
-  protected creationPageTitle(): string {
-    return 'novo';
-  }
-  protected editionPageTitle(): string {
-    return 'Edição';
-  }
-
-  protected viewPageTitle(): string {
-    return 'Visualizar';
+    this.currentAction = 'new';
   }
 
   public createResource() {
     const resource: MovimentacaoManual = this.jsonDataToResouceFn(
       this.resourceForm.value
     );
-
+    
     console.log(resource);
     
-    this.resourceService.post(resource).subscribe({
-      next: (success) => this.actionsForSuccess(success),
-      error: (error) => this.actionsForError(error),
-    });
-  }
-
-  protected updateResource() {
-    const resource: MovimentacaoManual = this.jsonDataToResouceFn(
-      this.resourceForm.value
-    );
-
-    this.resourceService.put(resource).subscribe({
+    this.movimentacaoService.salvar(resource).subscribe({
       next: (success) => this.actionsForSuccess(success),
       error: (error) => this.actionsForError(error),
     });
@@ -229,17 +174,6 @@ export class HomeComponent
 
   onChange(event) {
     this.carregaProdutoCosif(event);
-    console.log(event);
-  }
-
-  protected setTimeSpinner() {
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 1000);
-  }
-
-  protected setShowSpinner() {
-    this.spinner.show();
   }
 
   protected getRoutePath(): string {
@@ -261,7 +195,6 @@ export class HomeComponent
   private carregaProdutoCosif(id: number): void {
     this.produtoCosifService.getAllProduto(id).subscribe(
       (success) => {
-        console.log(success);
         this.produtoCosifs = success;
       },
       (error) => console.log(error)
@@ -270,8 +203,8 @@ export class HomeComponent
 
   novo() {
     this.isNovo = false;
-    console.log(this.isNovo);
     this.limparCampo();
+    this.currentAction == 'new';
   }
 
   limparCampo() {

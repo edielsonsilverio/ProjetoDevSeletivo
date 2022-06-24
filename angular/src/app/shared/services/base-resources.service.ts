@@ -75,7 +75,7 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
   post(resource: T, token: boolean = false): Observable<T> {
     const url = `${this.UrlServiceV1}${this.apiPath}/`;
     
-    console.log(resource);
+    console.log('teste ' +resource);
     
     return this.http
       .post(url, token ? this.ObterAuthHeaderJson() : this.ObterHeaderJson())
