@@ -145,6 +145,9 @@ export class HomeComponent
       next: (success) => this.actionsForSuccess(success),
       error: (error) => this.actionsForError(error),
     });
+
+    this.isNovo = true;
+    super.ngOnInit();
   }
 
   protected actionsForSuccess(resource: MovimentacaoManual) {
